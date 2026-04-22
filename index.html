@@ -7,18 +7,30 @@
     <style>
         body {
             margin: 0; padding: 0;
-            background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
-            font-family: 'Georgia', serif; color: white;
+            /* This is the part that adds your image */
+            background-image: url('il_570xN.6744392683_8xrz.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            font-family: 'Georgia', serif; 
+            /* Changed color to a dark blue so it's visible on the white background */
+            color: #0b4f6c; 
             display: flex; justify-content: center; align-items: center;
             height: 100vh; text-align: center; overflow: hidden;
         }
 
-        .container { z-index: 10; padding: 20px; }
+        .container { 
+            z-index: 10; 
+            padding: 20px; 
+            background: rgba(255, 255, 255, 0.7); /* Adds a soft white glow behind text */
+            border-radius: 20px;
+        }
         
         h1 { 
             font-size: 3rem; 
             margin-bottom: 10px; 
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2); 
+            color: #d63384; /* A heart-red color for the title */
         }
 
         .quote { 
@@ -31,9 +43,9 @@
 
         .video-btn {
             margin-top: 30px; padding: 15px 30px; font-size: 1.2rem;
-            background-color: white; color: #4facfe; border: none;
+            background-color: #0b4f6c; color: white; border: none;
             border-radius: 50px; cursor: pointer; font-weight: bold;
-            transition: transform 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .video-btn:hover { transform: scale(1.05); }
@@ -50,15 +62,15 @@
         .close-btn { margin-top: 20px; color: white; cursor: pointer; text-decoration: underline; }
 
         /* Moving Fish */
-        .fish { position: absolute; font-size: 2rem; animation: swim linear infinite; z-index: 1; }
+        .fish { position: absolute; font-size: 2.5rem; animation: swim linear infinite; z-index: 1; }
         @keyframes swim { from { left: -100px; } to { left: 100vw; } }
     </style>
 </head>
 <body>
 
-    <div class="fish" style="top: 15%; animation-duration: 10s;">🐟</div>
-    <div class="fish" style="top: 45%; animation-duration: 14s; animation-delay: 4s;">🐠</div>
-    <div class="fish" style="top: 80%; animation-duration: 18s; animation-delay: 2s;">🐡</div>
+    <div class="fish" style="top: 10%; animation-duration: 12s;">🐟</div>
+    <div class="fish" style="top: 40%; animation-duration: 15s; animation-delay: 5s;">🐠</div>
+    <div class="fish" style="top: 85%; animation-duration: 20s; animation-delay: 2s;">🐡</div>
 
     <div class="container">
         <h1>Happy Two Years!</h1>
@@ -67,7 +79,7 @@
             it feels like it's just you and me."
         </p>
         <button class="video-btn" onclick="openVideo()">Click for a Surprise 🎥</button>
-        <p style="margin-top: 20px; font-size: 1.2rem;">💙 Julie & Wyatt 💙</p>
+        <p style="margin-top: 20px; font-size: 1.2rem; font-weight: bold;">💙 Julie & Wyatt 💙</p>
     </div>
 
     <div id="videoOverlay">
@@ -76,7 +88,6 @@
     </div>
 
     <script>
-        // Your specific YouTube Video ID
         var youtubeID = "tQHZ-0IAeHI"; 
 
         function openVideo() {
