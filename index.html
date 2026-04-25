@@ -97,8 +97,8 @@
     <div class="container">
         <h1>Happy Two Years!</h1>
         <p class="quote">
-            there's a million fish in the sea, but I'm glad since we met 
-            it feels like just u & me <3!
+            My lover is mine, and I am his.  
+            -Song of Solomon 2:16
         </p>
         
         <button class="heart-btn" onclick="openVideo()">
@@ -111,18 +111,21 @@
         <div class="close-btn" onclick="closeVideo()">Close Video</div>
     </div>
 
-    <script>
-        var youtubeID = "tQHZ-0IAeHI"; 
+<script>
+    // Your new video ID
+    var youtubeID = "MCvqRDt_5gE"; 
 
-        function openVideo() {
-            document.getElementById('anniversaryVideo').src = "https://www.youtube.com/embed/" + youtubeID + "?autoplay=1";
-            document.getElementById('videoOverlay').style.display = 'flex';
-        }
-        function closeVideo() {
-            document.getElementById('videoOverlay').style.display = 'none';
-            document.getElementById('anniversaryVideo').src = "";
-        }
-    </script>
+    function openVideo() {
+        // This converts the ID into a playable embed link
+        document.getElementById('anniversaryVideo').src = "https://www.youtube.com/embed/" + youtubeID + "?autoplay=1";
+        document.getElementById('videoOverlay').style.display = 'flex';
+    }
+    
+    function closeVideo() {
+        document.getElementById('videoOverlay').style.display = 'none';
+        document.getElementById('anniversaryVideo').src = "";
+    }
+</script>
 
 </body>
 </html>
